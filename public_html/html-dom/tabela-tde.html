@@ -1,0 +1,36 @@
+<head>
+    <meta charset="UTF-8">
+    <script>
+        $('.bt-excluir').click(function () {
+           $(this).parent().parent().parent().animate({
+               'margin-left':'1200px'
+           },500,function(){
+               $(this).remove();
+           });
+        });
+    </script>
+</head>
+<body>
+    <div class="col-md-12">
+        <!--<input class="input-localizar-gw">-->
+        <div class="col-md-3">
+            <span class="container-input-form-gw input-width-80">
+                <input class="input-dom-gw input-width-100" id="grupo" type="text" placeholder="Campo obrigatório!" />
+            </span>
+            <img src="./img/icon-more.png" alt="" class="inp-localizar"/>
+        </div>
+        <div class="col-md-2">
+            <span class="container-input-form-gw input-width-100">
+                <input class="input-dom-gw input-width-100" id="valorTDE" type="text" placeholder="Campo obrigatório!" />
+            </span>
+        </div>
+        <div class="col-md-3">
+            <span class="container-input-form-gw input-width-100">
+                <input class="input-dom-gw input-width-100" id="formula" type="text" placeholder="Campo obrigatório!" />
+            </span>
+        </div>
+        <div class="col-md-1">
+            <img src="./img/excluir.png" class="bt-excluir">
+        </div>
+    </div>
+</body>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="ISO-8859-1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="js/jquery-3.2.1.min.js" type="text/javascript"></script>
+        <script>
+            $(document).ready(function () {
+                $(".col-3 input").val("");
+                $(".input-effect input").focusout(function () {
+                    if ($(this).val() != "") {
+                        console.log('aa');
+                        $(this).addClass("has-content");
+                    } else {
+                        console.log('bb');
+                        $(this).removeClass("has-content");
+                    }
+                })
+            });
+        </script>
+        <style>
+            :focus{outline: none;}
+
+            .col-3{float: left; width: 27.33%; margin: 40px 3%; position: relative;} /* necessary to give position: relative to parent. */
+            input[type="text"]{font: 15px/24px "Lato", Arial, sans-serif; color: #333; width: 100%; box-sizing: border-box; letter-spacing: 1px;}
+            
+            .effect-19,
+            .effect-20,
+            .effect-21{border: 1px solid #ccc; padding: 7px 14px; transition: 0.4s; background: transparent;}
+
+            .effect-19 ~ .focus-border:before,
+            .effect-19 ~ .focus-border:after{content: ""; position: absolute; top: -1px; left: 50%; width: 0; height: 2px; background-color: #3399FF; transition: 0.4s;}
+            .effect-19 ~ .focus-border:after{top: auto; bottom: 0;}
+            .effect-19 ~ .focus-border i:before,
+            .effect-19 ~ .focus-border i:after{content: ""; position: absolute; top: 50%; left: 0; width: 2px; height: 0; background-color: #3399FF; transition: 0.6s;}
+            .effect-19 ~ .focus-border i:after{left: auto; right: 0;}
+            .effect-19:focus ~ .focus-border:before,
+            .effect-19:focus ~ .focus-border:after,
+            .has-content.effect-19 ~ .focus-border:before,
+            .has-content.effect-19 ~ .focus-border:after{left: 0; width: 100%; transition: 0.4s;}
+            .effect-19:focus ~ .focus-border i:before,
+            .effect-19:focus ~ .focus-border i:after,
+            .has-content.effect-19 ~ .focus-border i:before,
+            .has-content.effect-19 ~ .focus-border i:after{top: -1px; height: 100%; transition: 0.6s;}
+            .effect-19 ~ label{position: absolute; left: 14px; width: 100%; top: 10px; color: #aaa; transition: 0.3s; z-index: -1; letter-spacing: 0.5px;}
+            .effect-19:focus ~ label, .has-content.effect-19 ~ label{top: -18px; left: 0; font-size: 12px; color: #3399FF; transition: 0.3s;}
+        </style>
+    </head>
+    <body>
+        <div class="col-3 input-effect">
+            <input class="effect-19" type="text" placeholder="">
+            <label>First Name</label>
+            <span class="focus-border">
+                <i></i>
+            </span>
+        </div>
+    </body>
+</html>

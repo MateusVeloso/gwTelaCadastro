@@ -1,0 +1,26 @@
+/* 
+    Created on : 12/12/2017, 09:20:07
+    Author     : MATEUS
+*/
+.inp-localizar{
+    position: absolute;
+    width: 28px;
+    cursor: pointer;
+    margin-left: 10px;
+    border-right: 1px solid #ccc;
+    top: 0px;
+    padding-right: 10px;
+}
+
+.input-localizar-gw{
+    box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.4);
+    font-family: "Open Sans", sans;
+    border: 0;
+    outline: none;
+    height: 40px;
+    margin-left: 10px;
+    padding-left: 5px;
+    border-radius: 5px;
+    width: 200px;
+    margin-top: 2px;
+}
